@@ -1,0 +1,116 @@
+@import './variables.scss';
+
+@mixin dot($size) {
+  content: '';
+  background-color: $mainBlue;
+  width: $size;
+  height: $size;
+  position: absolute;
+  border-radius: 50%;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $mainDark;
+  margin-top: 50px;
+  position: relative;
+  &__logo {
+    position: absolute;
+    left: 50px;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 800;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: capitalize;
+  }
+  &__navItem {
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    &_active {
+      color: $mainBlue;
+      &:hover {
+        cursor: default;
+      }
+      &::after {
+        @include dot(7px);
+      }
+    }
+  }
+  &__langStart {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    right: 50px;
+  }
+  &__lang {
+    color: #979bad;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  &__langItem {
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    &_active {
+      color: $mainBlue;
+      &:hover {
+        cursor: default;
+      }
+      &::after {
+        @include dot(4px);
+      }
+    }
+  }
+  &__startProject {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $mainBlue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__circle {
+    position: absolute;
+    left: 67%;
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
+    width: 59px;
+    height: 59px;
+  }
+}

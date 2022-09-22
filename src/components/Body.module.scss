@@ -1,0 +1,70 @@
+@import './variables.scss';
+
+.Container {
+  max-width: 1152px;
+  margin: 0 auto;
+  margin-top: 127px;
+}
+
+.Breadcrumbs {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: $mainDark;
+  &__currentPage {
+    font-weight: 600;
+  }
+}
+
+.Title {
+  font-size: 80px;
+  line-height: 120px;
+  color: $mainBlue;
+  font-weight: 700;
+  margin: 61px 0 0 0;
+}
+
+.preFormText {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #343434;
+  max-width: 542px;
+}
+
+.blueText {
+  color: $mainBlue;
+  font-weight: 700;
+}
+
+.Form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  &__lable {
+    position: absolute;
+    left: 0;
+    color: red;
+  }
+  label:after {
+    content: ' *';
+    color: red;
+  }
+  &__2first {
+    display: flex;
+    gap: 30px;
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+lable {
+  color: red;
+}
