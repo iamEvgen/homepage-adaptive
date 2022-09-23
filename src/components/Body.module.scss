@@ -19,9 +19,10 @@
 .Container {
   flex: 1;
   max-width: $containerMaxWidth;
-  margin: 127px 40px 0 40px;
+  margin: 147px 40px 0 40px;
   @media (max-width: $breakpointTablet) {
     max-width: 756px;
+    margin-top: 122px;
   }
 }
 
@@ -41,6 +42,9 @@
   color: $mainBlue;
   font-weight: 700;
   margin: 61px 0 0 0;
+  @media (max-width: $breakpointTablet) {
+    font-size: 60px;
+  }
 }
 
 .preFormText {
@@ -49,6 +53,9 @@
   line-height: 30px;
   color: #343434;
   max-width: 542px;
+  @media (max-width: $breakpointTablet) {
+    font-size: 16px;
+  }
 }
 
 .blueText {
@@ -68,6 +75,7 @@
   @media (max-width: $breakpointTablet) {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 100px;
     margin-bottom: 100px;
   }
   &__2first {
@@ -172,6 +180,10 @@
         transform: translateY(-25px);
         font-size: 16px;
         line-height: 18px;
+        @media (max-width: $breakpointTablet) {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
     }
   }

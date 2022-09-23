@@ -18,14 +18,20 @@
   justify-content: center;
   align-items: center;
   color: $mainDark;
-  margin-top: 50px;
+  margin-top: 60px;
   position: relative;
+  @media (max-width: $breakpointTablet) {
+    margin-top: 50px;
+  }
   &__logo {
     position: absolute;
     left: 50px;
     @include Logo;
     &:hover {
       cursor: pointer;
+    }
+    @media (max-width: $breakpointTablet) {
+      left: 42px;
     }
   }
   &__nav {
@@ -65,6 +71,9 @@
     align-items: center;
     gap: 60px;
     right: 50px;
+    @media (max-width: $breakpointTablet) {
+      right: 40px;
+    }
   }
   &__lang {
     color: #979bad;
