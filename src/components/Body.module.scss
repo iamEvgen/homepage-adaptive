@@ -7,10 +7,16 @@
   border-radius: 50%;
 }
 
+.Body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .Container {
+  flex: 1;
   max-width: $containerMaxWidth;
-  margin: 0 auto;
-  margin-top: 127px;
+  margin: 127px 20px 0 20px;
 }
 
 .Breadcrumbs {
@@ -149,5 +155,19 @@
         line-height: 18px;
       }
     }
+  }
+}
+
+.Dots {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  left: 50px;
+  top: 432px;
+  div {
+    @include dotStyle;
+  }
+  @media (max-width: 1340px) {
+    display: none;
   }
 }

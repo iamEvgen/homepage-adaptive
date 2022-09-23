@@ -5,6 +5,7 @@ import styles from './Footer.module.scss';
 function Footer() {
   const telegramIcon = require('../img/telegram.png');
   const whatsappIcon = require('../img/whatsapp.png');
+  const arrow2 = require('../img/arrow2.png');
 
   return (
     <footer className={styles.Footer}>
@@ -38,19 +39,28 @@ function Footer() {
             <div className={styles.InfoBlock__contacts}>
               <div className={styles.InfoBlock__links}>
                 <ul>
-                  <li>Скачать презентацию</li>
-                  <li>+7 (499) 999-99-99</li>
+                  <li className={styles.InfoBlock__download}>
+                    Скачать презентацию
+                    <img
+                      className={styles.InfoBlock__arrow}
+                      src={arrow2}
+                      alt="arrow icon"
+                    />
+                  </li>
+                  <li className={styles.InfoBlock__phone}>
+                    +7 (499) 999-99-99
+                  </li>
                   <li>info@site.com</li>
                 </ul>
               </div>
               <div className={styles.InfoBlock__icons}>
                 <img
-                  className={styles.InfoBlock_icon}
+                  className={styles.InfoBlock__icon}
                   src={telegramIcon}
                   alt="telegram icon"
                 />
                 <img
-                  className={styles.InfoBlock_icon}
+                  className={styles.InfoBlock__icon}
                   src={whatsappIcon}
                   alt="telegram icon"
                 />
@@ -63,7 +73,7 @@ function Footer() {
             © Company 2022. All rights reserved.
           </div>
           <div className={styles.Privacy__policy}>
-            Политика конфиденциальночти
+            Политика конфиденциальноcти
           </div>
         </div>
       </div>

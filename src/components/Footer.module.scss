@@ -8,7 +8,7 @@
 }
 
 .Container {
-  margin-top: 42px;
+  margin: 42px 20px 0;
   max-width: $containerMaxWidth;
   width: 100%;
   display: flex;
@@ -28,20 +28,71 @@
 }
 
 .InfoBlock {
+  max-width: 180px;
   &__title {
+    display: flex;
+    align-items: center;
     position: relative;
     display: flex;
     font-weight: 700;
     font-size: 25px;
     line-height: 31px;
     &::after {
-      content: '1';
+      content: '';
       width: 9px;
       height: 9px;
-      color: white;
-      position: absolute;
-      top: 0;
-      left: 0;
+      border-radius: 50%;
+      background-color: white;
+      margin-left: 10px;
     }
+  }
+  &__links {
+    font-weight: 600;
+    margin-top: 25px;
+    ul {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  &__download {
+    display: flex;
+    align-items: center;
+  }
+  &__arrow {
+    width: 9px;
+    margin-left: 15px;
+  }
+  &__phone {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &__contacts {
+    position: relative;
+  }
+  &__icons {
+    position: absolute;
+    top: 0;
+    right: -98px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__icon {
+    width: 34px;
+  }
+}
+
+.Privacy {
+  margin: 50px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  &__policy {
+    transform: translateX(-50px);
   }
 }
