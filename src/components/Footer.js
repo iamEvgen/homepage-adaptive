@@ -67,12 +67,10 @@ function Footer() {
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.Privacy}>
-          <div className={styles.Privacy__copyright}>
+          <div className={(styles.Privacy, styles.Privacy__copyright)}>
             © Company 2022. All rights reserved.
           </div>
-          <div className={styles.Privacy__policy}>
+          <div className={(styles.Privacy, styles.Privacy__policy)}>
             Политика конфиденциальноcти
           </div>
         </div>

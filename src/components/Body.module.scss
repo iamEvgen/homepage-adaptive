@@ -11,12 +11,18 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  @media (max-width: $breakpointTablet) {
+    justify-content: flex-start;
+  }
 }
 
 .Container {
   flex: 1;
   max-width: $containerMaxWidth;
-  margin: 127px 20px 0 20px;
+  margin: 127px 40px 0 40px;
+  @media (max-width: $breakpointTablet) {
+    max-width: 756px;
+  }
 }
 
 .Breadcrumbs {
@@ -53,15 +59,25 @@
 .Form {
   margin-top: 120px;
   margin-bottom: 160px;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  @media (max-width: $breakpointTablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+  }
   &__2first {
     max-width: 741px;
     width: 100%;
     display: flex;
     gap: 30px;
+    @media (max-width: $breakpointTablet) {
+      gap: 20px;
+    }
   }
   &__inputs {
     max-width: 741px;
@@ -71,6 +87,9 @@
   }
   &__inputblock1 {
     flex: 1.55;
+    @media (max-width: $breakpointTablet) {
+      flex: 1.26;
+    }
   }
   &__inputblock2 {
     flex: 1;
@@ -155,6 +174,13 @@
         line-height: 18px;
       }
     }
+  }
+}
+
+.SendButton {
+  @media (max-width: $breakpointTablet) {
+    margin-top: 62px;
+    align-self: flex-start;
   }
 }
 

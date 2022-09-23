@@ -63,7 +63,9 @@ function Body() {
               </div>
             </div>
           </div>
-          <SendButton />
+          <div className={styles.SendButton}>
+            <SendButton />
+          </div>
         </form>
         <div className={styles.Dots}>
           <div></div>

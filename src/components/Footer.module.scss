@@ -8,22 +8,35 @@
 }
 
 .Container {
-  margin: 42px 20px 0;
+  margin: 42px 40px 0;
   max-width: $containerMaxWidth;
   width: 100%;
   display: flex;
   flex-direction: column;
+  @media (max-width: $breakpointTablet) {
+    margin-top: 38px;
+  }
 }
 
 .LogoAndInfo {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 40px 40px;
+  grid-template-areas: 'logo col1 col2 col3' 'space space space space' 'copyright copyright copyright policy';
+  @media (max-width: $breakpointTablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 90px 1fr 126px 46px;
+    grid-template-areas: 'logo logo logo' 'col1 col2 col3' 'space space space' 'copyright copyright policy';
+  }
 }
 
 .Logo {
   @include Logo;
   &:hover {
     cursor: pointer;
+  }
+  @media (max-width: $breakpointTablet) {
+    grid-area: logo;
   }
 }
 
@@ -63,6 +76,9 @@
   &__download {
     display: flex;
     align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__arrow {
     width: 9px;
@@ -82,17 +98,32 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media (max-width: 1100px) {
+      right: -74px;
+    }
+    @media (max-width: $breakpointTablet) {
+      right: -98px;
+    }
   }
   &__icon {
     width: 34px;
   }
+  &:nth-child(1) {
+    grid-area: col1;
+  }
+  &:nth-child(1) {
+    grid-area: col2;
+  }
+  &:nth-child(1) {
+    grid-area: col2;
+  }
 }
 
 .Privacy {
-  margin: 50px 0 20px;
-  display: flex;
-  justify-content: space-between;
+  &__copyright {
+    grid-area: copyright;
+  }
   &__policy {
-    transform: translateX(-50px);
+    grid-area: policy;
   }
 }

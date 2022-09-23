@@ -13,6 +13,7 @@
 }
 
 .Head {
+  height: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +40,9 @@
     font-size: 18px;
     line-height: 21px;
     text-transform: capitalize;
+    @media (max-width: $breakpointTablet) {
+      display: none;
+    }
   }
   &__navItem {
     position: relative;
