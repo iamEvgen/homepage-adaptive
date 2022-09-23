@@ -1,2 +1,9 @@
 $mainBlue: #388af3;
 $mainDark: #303030;
+$containerMaxWidth: 1152px;
+
+@mixin Logo {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 800;
+}

@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+@mixin centerAbs {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.SendButton {
+  width: 227px;
+  height: 227px;
+  background: linear-gradient(93.29deg, #388af3 21.04%, #a483e2 88.77%);
+  border-radius: 50%;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    .SendButton__bg {
+      background-color: $mainBlue;
+      width: 100%;
+      height: 100%;
+    }
+    .SendButton__text {
+      top: 50%;
+      color: white;
+    }
+    .SendButton__airplane {
+      width: 96px;
+      top: 12px;
+      left: 117px;
+    }
+  }
+  &__bg {
+    background-color: white;
+    width: 217px;
+    height: 217px;
+    border-radius: 50%;
+    position: absolute;
+    @include centerAbs();
+    transition: all 0.3s ease-in-out;
+    &_clicked {
+      background-color: $mainBlue;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__airplane {
+    width: 57px;
+    position: absolute;
+    top: 63px;
+    left: 89px;
+    transition: all 0.3s ease-in-out;
+    &_clicked {
+      animation: flight 1s;
+      opacity: 0;
+    }
+  }
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $mainBlue;
+    transition: all 0.3s ease-in-out;
+    &_clicked {
+      top: 50%;
+      color: white;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes flight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    width: 28px;
+    top: 0px;
+    left: 199px;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Body.module.scss';
 import SendButton from './SendButton';
+import classNames from 'classnames';
 
 function Body() {
   return (
@@ -17,15 +18,37 @@ function Body() {
       <form className={styles.Form}>
         <div className={styles.Form__inputs}>
           <div className={styles.Form__2first}>
-            <label className="Form__lable" htmlFor="name">
-              Ваше имя
-            </label>
-            <input id="name" type="text" />
-            <label htmlFor="email">Ваш E-Mail</label>
-            <input id="email" type="email" />
+            <div
+              className={classNames(
+                styles.InputBlock,
+                styles.Form__inputblock1
+              )}
+            >
+              <input id="name" type="text" />
+              <label className={styles.InputBlock__label1} htmlFor="name">
+                Ваше имя
+              </label>
+            </div>
+            <div
+              className={classNames(
+                styles.InputBlock,
+                styles.Form__inputblock2
+              )}
+            >
+              <input id="email" type="email" />
+              <label className={styles.InputBlock__label2} htmlFor="email">
+                Ваш E-Mail
+              </label>
+            </div>
           </div>
-          <label htmlFor="comment">Комментарий</label>
-          <input id="comment" type="text" />
+          <div
+            className={classNames(styles.InputBlock, styles.Form__inputblock3)}
+          >
+            <label className={styles.InputBlock__label3} htmlFor="comment">
+              Комментарий
+            </label>
+            <input id="comment" type="text" />
+          </div>
           <div className={styles.Form__privacy}>
             <div className={styles.Form__acceptPrivacy}></div>
             <div className={styles.Form__textPrivacy}>
