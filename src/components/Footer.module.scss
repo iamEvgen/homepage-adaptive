@@ -17,6 +17,10 @@
     margin-top: 38px;
     margin-bottom: 26px;
   }
+  @media (max-width: $breakpointPhone) {
+    margin-top: 51px;
+    margin-bottom: 21px;
+  }
 }
 
 .LogoAndInfo {
@@ -28,6 +32,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 90px 1fr 126px auto;
     grid-template-areas: 'logo logo logo' 'col1 col2 col3' 'space space space' 'copyright copyright policy';
+  }
+  @media (max-width: $breakpointPhone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr 1fr 1fr auto auto;
+    grid-template-areas: 'logo' 'col1' 'col2' 'col3' 'policy' 'copyright';
   }
 }
 
@@ -43,6 +52,9 @@
 
 .InfoBlock {
   max-width: 180px;
+  @media (max-width: $breakpointPhone) {
+    margin-bottom: 35px;
+  }
   &__title {
     display: flex;
     align-items: center;
@@ -106,14 +118,15 @@
       right: -98px;
       transform: translateY(-55px);
     }
-    @media (max-width: 815px) {
-      right: -74px;
+    @media (max-width: 830px) {
+      right: -55px;
     }
-    @media (max-width: 750px) {
-      right: -54px;
+    @media (max-width: 715px) {
+      right: -35px;
     }
-    @media (max-width: 675px) {
-      right: -34px;
+    @media (max-width: $breakpointPhone) {
+      right: -87px;
+      transform: translateY(0px);
     }
   }
   &__icon {
@@ -136,5 +149,8 @@
   }
   &__policy {
     grid-area: policy;
+    @media (max-width: $breakpointPhone) {
+      margin-bottom: 10px;
+    }
   }
 }

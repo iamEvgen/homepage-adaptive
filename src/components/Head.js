@@ -40,6 +40,11 @@ function Head() {
           <div className={styles.Head__circle}></div>
         </div>
       </div>
+      <div className={styles.Head_dots}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </header>
   );
 }

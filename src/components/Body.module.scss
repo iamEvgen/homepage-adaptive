@@ -1,18 +1,14 @@
 @import './variables.scss';
 
-@mixin dotStyle() {
-  background-color: $mainBlue;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-}
-
 .Body {
   display: flex;
   width: 100%;
   justify-content: center;
   @media (max-width: $breakpointTablet) {
     justify-content: flex-start;
+  }
+  @media (max-width: $breakpointPhone) {
+    justify-content: center;
   }
 }
 
@@ -24,6 +20,9 @@
     max-width: 756px;
     margin-top: 122px;
   }
+  @media (max-width: $breakpointPhone) {
+    margin-top: 112px;
+  }
 }
 
 .Breadcrumbs {
@@ -33,6 +32,14 @@
   color: $mainDark;
   &__currentPage {
     font-weight: 600;
+  }
+  @media (max-width: $breakpointTablet) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  @media (max-width: $breakpointPhone) {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
@@ -45,6 +52,10 @@
   @media (max-width: $breakpointTablet) {
     font-size: 60px;
   }
+  @media (max-width: $breakpointPhone) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .preFormText {
@@ -55,6 +66,10 @@
   max-width: 542px;
   @media (max-width: $breakpointTablet) {
     font-size: 16px;
+  }
+  @media (max-width: $breakpointPhone) {
+    margin-top: 22px;
+    max-width: calc(100vw - 93px);
   }
 }
 
@@ -78,6 +93,9 @@
     margin-top: 100px;
     margin-bottom: 100px;
   }
+  @media (max-width: $breakpointPhone) {
+    margin-top: 80px;
+  }
   &__2first {
     max-width: 741px;
     width: 100%;
@@ -85,6 +103,10 @@
     gap: 30px;
     @media (max-width: $breakpointTablet) {
       gap: 20px;
+    }
+    @media (max-width: $breakpointPhone) {
+      flex-direction: column;
+      gap: 60px;
     }
   }
   &__inputs {
@@ -113,6 +135,9 @@
     display: flex;
     align-items: center;
     position: relative;
+    @media (max-width: $breakpointPhone) {
+      margin-top: 35px;
+    }
   }
   &__acceptPrivacy {
     width: 28px;
@@ -194,17 +219,14 @@
     margin-top: 62px;
     align-self: flex-start;
   }
+  @media (max-width: $breakpointPhone) {
+    margin-top: 35px;
+    align-self: flex-start;
+  }
 }
 
 .Dots {
-  display: flex;
-  gap: 5px;
-  position: absolute;
-  left: 50px;
-  top: 432px;
-  div {
-    @include dotStyle;
-  }
+  @include Dots;
   @media (max-width: 1340px) {
     display: none;
   }

@@ -13,7 +13,7 @@ function Body() {
         </div>
         <h1 className={styles.Title}>Мы рядом</h1>
         <p className={styles.preFormText}>
-          Заполните форму ниже и мы свяжемся в вами. Не любите формы? Напишите
+          Заполните форму ниже и мы свяжемся с вами. Не любите формы? Напишите
           нам на почту <span className={styles.blueText}>info@site.com</span>
         </p>
         <form className={styles.Form}>

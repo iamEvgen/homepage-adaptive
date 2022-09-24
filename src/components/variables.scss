@@ -1,6 +1,9 @@
 $mainBlue: #388af3;
 $mainDark: #303030;
+
 $containerMaxWidth: 1152px;
+$breakpointTablet: 1023px;
+$breakpointPhone: 649px;
 
 @mixin Logo {
   font-size: 40px;
@@ -8,5 +11,20 @@ $containerMaxWidth: 1152px;
   font-weight: 800;
 }
 
-$breakpointTablet: 1023px;
-$breakpointPhone: 649px;
+@mixin dotStyle() {
+  background-color: $mainBlue;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+@mixin Dots {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  left: 50px;
+  top: 432px;
+  div {
+    @include dotStyle;
+  }
+}
