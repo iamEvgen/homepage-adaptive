@@ -230,4 +230,7 @@
   @media (max-width: 1340px) {
     display: none;
   }
+  &:hover {
+    cursor: pointer;
+  }
 }
