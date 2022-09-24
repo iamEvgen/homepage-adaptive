@@ -15,7 +15,7 @@
 .Container {
   flex: 1;
   max-width: $containerMaxWidth;
-  margin: 147px 40px 0 40px;
+  margin: 127px 40px 0 40px;
   @media (max-width: $breakpointTablet) {
     max-width: 756px;
     margin-top: 122px;
